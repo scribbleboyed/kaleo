@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Kaleo</title>
+
+	<!-- BOOTSTRAP DEPENDENCY -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- STYLESHEET LINKS -->
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<div id="header" class="jumbotron">
+		<div class="container">
+			<div class="page-header">
+				<h1>Kaleo <small>Search for anything</small></h1>
+			</div>
+		</div>
+
+		<div id="search-div">
+			<div class="row">
+				<div class="col-sm-11 col-sm-offset-1">
+				    <input type="text" name="search" id="search-field" placeholder="What are you searching for?">
+					    <span id="search-icon" class="glyphicon glyphicon-search" aria-hidden="true"></span>
+					</input>
+				</div>
+				<div id="tags-container" class="container">
+					<script type="text/template" class="tag-template">
+						<% tags.forEach(function(tag) { %>
+	       					<span onclick="filterByTag('<%= tag %>')" class="tag label">
+	        					<%= tag %>
+	        				</span>
+        				<% }); %>
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="body">
+
+			<div id="results-container" class="container">
+		        <script type="text/template" class="result-template">
+		        	<a href="<%= url %>">
+			        	<div class="panel panel-default row result-row">
+				            <div class="col-sm-6">
+				            	<h4><b><%= title %></b></h4>
+				            	<span><%= board_name %></span>
+				            </div>
+				            <div class="col-sm-1">
+				            	<span class="label label-info"><%= views_count %> views</span>
+				            </div>
+				            <div class="col-sm-2">
+				            	<%= answers_count %>
+				            	<% if (answers_count == 1) { %>
+				            		responses
+				            	<% } else { %>
+				            		response
+				            	<% } %>
+				            </div>
+			        </a>
+			        <div class="tags-container">
+        			<% tag_names.forEach(function(tag_name) { %>
+	       				<span onclick="filterByTag('<%= tag_name %>')" class="tag label">
+	        				<%= tag_name %>
+	        			</span>
+        			<% }); %>
+        			</div>
+		        </script>
+		    </div>
+
+	</div>
+
+	<div id="footer">
+
+	</div>
+
+	<!-- JQUERY DEPENDENCY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+
+	<!-- LODASH DEPENDENCY -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+
+	<!-- JAVASCRIPT FILE(S) -->
+	<script src="js/script.js"></script>
+</body>
+</html>
