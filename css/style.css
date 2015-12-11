@@ -1,6 +1,10 @@
+/* HEADER SECTION */
+
 #header {
 	border-bottom: 5px solid #ddd;
 }
+
+/* SEARCH SECTION */
 
 #search-div {
 	padding: 30px;
@@ -12,21 +16,20 @@
 	padding: 20px;
 	background: #fff;
 	border-radius: 5px;
-	border: 1px solid #eee;
+	border: 3px solid #fff;
+	font-size: 20px;
 	transition: 0.5s;
 }
 
 #search-field:hover {
   	outline: 0;
-  	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,.4);
-  	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,.4);
+  	border: 3px solid #ccc;
   	transition: 0.5s;
 }
 
 #search-field:focus {
   	outline: 0;
-  	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,1);
-  	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(100,100,100,1);
+  	border: 3px solid #446688;
   	transition: 0.2s;
 }
 
@@ -43,14 +46,62 @@
 	width: 100%;
 }
 
+/* TAGS SECTION */
 
+#tags-title {
+	font-size: 15px;
+	margin: 2px;
+	color: #aaa;
+}
 
+#tags-section {
+	margin-top: 15px;
+	color: #000;
+}
+
+.tag {
+	display: inline-block;
+	margin: 2px;
+	font-size: 15px;
+	background: #bbb;
+	color: #fff;
+	transition: 0.1s;
+	cursor: pointer;
+}
+
+.tag:hover {
+	display: inline-block;
+	background: #446688;
+	color: #fff;
+	transition: 0.1s;
+}
+
+/* NAVIGATION SECTION */
+
+.nav-button {
+	font-size: 15px;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.nav-button:hover {
+	background: #446688;
+	transition: 0.3s;
+}
+
+.nav-div {
+	text-align: center;
+}
+
+/* RESULTS SECTION */
 
 #results-header {
 	padding: 5px 30px;
 }
 
 #results-container {
+	margin-top: 30px;
 	padding: 0px 30px 60px 30px;
 }
 
@@ -58,14 +109,14 @@
 	margin: 0px;
 	padding: 10px;
 	border: none;
-	border-bottom: 4px solid #eee;
+	border-bottom: 2px solid #eee;
 	border-radius: 0px;
 	transition: 0.3s;
 }
 
 .result-row:hover {
-	border-bottom: 4px solid #446688;
-	background: #ecf2f9;
+	border-bottom: 2px solid ##a9bfd3;
+	background: #f7f9fb;
 	transition: 0.3s;
 }
 
@@ -77,24 +128,7 @@
 	align-items: start;
 }
 
-.tags-container {
-	width: 130px;
-}
-
-.result-row .tag {
-	display: inline-block;
+.views {
 	font-size: 15px;
-	margin: 5px;
-	background: #bbb;
-	color: #fff;
-	transition: 0.1s;
-	cursor: pointer;
-}
-
-.result-row .tag:hover {
-	display: inline-block;
-	margin: 5px;
-	background: #888;
-	color: #fff;
-	transition: 0.1s;
+	background: #446688;
 }
